@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>HAKS SHOP | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium Clothing, Accessories & Cards - Your One Stop Fashion Destination">
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+    <nav class="navbar">
+        <h1 class="logo">HAKS SHOP</h1>
+
+        <!-- Search Bar -->
+        <div class="nav-search">
+            <input type="text" id="searchInput" placeholder="Search products...">
+            <button onclick="searchProducts()">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="cart.html">Cart <span id="cartCount" style="background:#ef4444;color:white;padding:2px 8px;border-radius:10px;font-size:12px;margin-left:5px;">0</span></a></li>
+            <li><a href="settings.html"><i class="fa-solid fa-gear"></i></a></li>
+            <li><a href="login.html" class="user-auth-link"><i class="fa-solid fa-user"></i> Login</a></li>
+            <li>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+    <h1>Welcome to HAKS SHOP</h1>
+    <p>Premium Clothing, Accessories & Cards – All in One Place</p>
+    <a href="clothing.html" class="btn-primary">Shop Now</a>
+</section>
+
+<!-- ================= CENTERED CATEGORY SECTION ================= -->
+<section class="category-center">
+
+    <div class="category-card reveal" onclick="location.href='clothing.html'">
+        <img src="assets/men-tshirt.webp" alt="Clothing">
+        <h2>Clothing</h2>
+        <p>Trendy collections for Men, Women & Kids</p>
+    </div>
+
+    <div class="category-card reveal" onclick="location.href='accessories.html'">
+        <img src="assets/watch.webp" alt="Accessories">
+        <h2>Accessories</h2>
+        <p>Jewellery, electronics, beauty products and more</p>
+    </div>
+
+    <div class="category-card reveal" onclick="location.href='cards.html'">
+        <img src="assets/banner.jpg" alt="Cards">
+        <h2>Cards</h2>
+        <p>Greeting cards and creative collections</p>
+    </div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p><strong>HAKS SHOP</strong> – Your One Stop Fashion Destination</p>
+    <p>support@haksshop.com | +91 90000 00000</p>
+    <p>&copy; 2026 HAKS SHOP. All Rights Reserved.</p>
+</footer>
+
+<!-- Global JS -->
+<script src="js/main.js"></script>
+</body>
+</html>

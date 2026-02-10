@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting Cards Collection | HAKS SHOP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <div class="logo">HAKS SHOP</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="clothing.html">Clothing</a></li>
+            <li><a href="accessories.html">Accessories</a></li>
+            <li><a href="cards.html" class="active">Cards</a></li>
+            <li><a href="cart.html">Cart <span id="cartCount" style="background:#ef4444;color:white;padding:2px 8px;border-radius:10px;font-size:12px;margin-left:5px;">0</span></a></li>
+            <li><a href="login.html" class="user-auth-link"><i class="fa-solid fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <h1>Greeting Cards Collection</h1>
+    <p>Beautifully crafted cards for every special moment</p>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="productContainer">
+    <div class="skeleton-grid">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>HAKS SHOP</strong> – Your One Stop Fashion Destination</p>
+    <p>support@haksshop.com | +91 90000 00000</p>
+    <p>&copy; 2026 HAKS SHOP. All rights reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    loadProducts('cards');
+});
+</script>
+</body>
+</html>

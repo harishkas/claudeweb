@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Settings | HAKS SHOP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">HAKS SHOP</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="settings.html" class="active">Settings</a></li>
+            <li><a href="login.html" class="user-auth-link"><i class="fa-solid fa-user"></i> Login</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="page-header">
+    <h1>Settings</h1>
+    <p>Customize your experience</p>
+</section>
+
+<section class="products" style="max-width:800px;margin:auto;padding:90px 8%;">
+
+    <!-- THEME -->
+    <div class="card3d">
+        <h3><i class="fa-solid fa-palette"></i> Appearance</h3>
+        <p>Switch between light and dark mode</p>
+        <button class="btn-primary" onclick="toggleTheme()" style="margin-top:15px;">Toggle Theme</button>
+    </div>
+
+    <!-- ACCOUNT -->
+    <div class="card3d">
+        <h3><i class="fa-solid fa-user"></i> Account</h3>
+        <p id="userInfo">Not logged in</p>
+        <button class="btn-primary" onclick="logoutUser()" style="margin-top:15px; background:#ef4444;">Logout</button>
+    </div>
+
+    <!-- ADMIN LINK -->
+    <div class="card3d">
+        <h3><i class="fa-solid fa-shield"></i> Admin Panel</h3>
+        <p>Access admin dashboard (requires admin login)</p>
+        <button class="btn-primary" onclick="location.href='admin.html'" style="margin-top:15px;">Go to Admin</button>
+    </div>
+
+</section>
+
+<footer>
+    <p><strong>HAKS SHOP</strong> – Premium Lifestyle Experience</p>
+    <p>&copy; 2026 HAKS SHOP. All Rights Reserved.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const userName = localStorage.getItem("user_name");
+    const userEmail = localStorage.getItem("user_email");
+    const userInfo = document.getElementById("userInfo");
+    
+    if (userName) {
+        userInfo.innerHTML = `<strong>${userName}</strong>`;
+    }
+});
+</script>
+</body>
+</html>

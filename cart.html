@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart | HAKS SHOP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <div class="logo">HAKS SHOP</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cart.html" class="active">Cart</a></li>
+            <li><a href="settings.html"><i class="fa-solid fa-gear"></i></a></li>
+            <li><a href="login.html" class="user-auth-link"><i class="fa-solid fa-user"></i> Login</a></li>
+            <li>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HEADER -->
+<section class="page-header">
+    <h1>Your Shopping Cart</h1>
+    <p>Premium products selected just for you</p>
+</section>
+
+<!-- CART -->
+<section class="cart-grid" id="cartContainer">
+    <div class="skeleton-grid">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+    </div>
+</section>
+
+<div class="cart-summary">
+    <h2 id="cartTotal">Total: ₹0</h2>
+    <button class="checkout-btn" onclick="location.href='checkout.html'">Proceed to Checkout</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p><strong>HAKS SHOP</strong> – Premium Lifestyle Experience</p>
+    <p>support@haksshop.com | +91 90000 00000</p>
+    <p>&copy; 2026 HAKS SHOP. All Rights Reserved.</p>
+</footer>
+
+<!-- SCRIPT -->
+<script src="js/main.js"></script>
+<script>
+// Load cart on page load
+document.addEventListener('DOMContentLoaded', () => {
+    loadCart();
+});
+</script>
+</body>
+</html>
