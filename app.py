@@ -764,7 +764,7 @@ def manage_orders():
 # =========================================================
 # INITIALIZE ON STARTUP
 # =========================================================
-@app.before_first_request
+@app.before_request
 def startup():
     init_db_pool()
     init_redis()
